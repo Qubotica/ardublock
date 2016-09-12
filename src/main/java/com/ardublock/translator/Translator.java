@@ -25,7 +25,7 @@ import edu.mit.blocks.workspace.Workspace;
 
 public class Translator
 {
-	private static final String variablePrefix = "_ABVAR_";
+	private static final String variablePrefix = "";
 
 	private Set<String> headerFileSet;
 	private Set<String> definitionSet;
@@ -94,6 +94,7 @@ public class Translator
 	public String generateSetupFunction()
 	{
 		StringBuilder setupFunction = new StringBuilder();
+		setupFunction.append("#include <Qudino.h>\n\n");
 		setupFunction.append("void setup()\n{\n");
 		
 		if (!inputPinSet.isEmpty())
@@ -285,7 +286,9 @@ public class Translator
 	public String buildVariableName(String reference)
 	{
 		variableCnt = variableCnt + 1;
-		String varName = variablePrefix + variableCnt + "_";
+		// String varName = variablePrefix + variableCnt + "_";
+		String varName = "";
+        // esto es un parche para generar variables con nombres como "S0" y "E0"
 		int i;
 		for (i=0; i<reference.length(); ++i)
 		{

@@ -57,7 +57,8 @@ public class OpenblocksFrame extends JFrame
 	
 	public String makeFrameTitle()
 	{
-		String title = Context.APP_NAME + " " + context.getSaveFileName();
+		//String title = Context.APP_NAME + " " + context.getSaveFileName();
+		String title = "Qublock " + context.getSaveFileName();
 		if (context.isWorkspaceChanged())
 		{
 			title = title + " *";
@@ -70,7 +71,7 @@ public class OpenblocksFrame extends JFrame
 	{
 		context = Context.getContext();
 		this.setTitle(makeFrameTitle());
-		this.setSize(new Dimension(1024, 760));
+		this.setSize(new Dimension(1024, 760));	//este deberia ser relativo
 		this.setLayout(new BorderLayout());
 		//put the frame to the center of screen
 		this.setLocationRelativeTo(null);
@@ -131,7 +132,7 @@ public class OpenblocksFrame extends JFrame
 				workspace.getBlockCanvas().getPageAt(0).getJComponent().paint(g);
 				try{
 					final JFileChooser fc = new JFileChooser();
-					fc.setSelectedFile(new File("ardublock.png"));
+					fc.setSelectedFile(new File("qublock.png"));
 					int returnVal = fc.showSaveDialog(workspace.getBlockCanvas().getJComponent());
 			        if (returnVal == JFileChooser.APPROVE_OPTION) {
 			            File file = fc.getSelectedFile();
@@ -160,7 +161,7 @@ public class OpenblocksFrame extends JFrame
 			    URL url;
 			    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
 			        try {
-						url = new URL("http://ardublock.com");
+						url = new URL("http://maquinaslibres.noblogs.org/");
 			            desktop.browse(url.toURI());
 			        } catch (Exception e1) {
 			            e1.printStackTrace();
