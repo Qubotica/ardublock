@@ -1668,7 +1668,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D5" label="D5" />
+					<DefaultArg genus-name="variable_number" label="S0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="number" label="90" />
@@ -2228,7 +2228,7 @@
 		
 		
 
-		<BlockGenus name="xcj_motor_forward" kind="command" color="0 255 0" initlabel="bg.xcj_motor_forward">
+		<BlockGenus name="xcj_motor_forward" kind="command" color="254 0 0" initlabel="bg.xcj_motor_forward">
 			<description>
 				<text>forward</text>
 			</description>
@@ -2247,7 +2247,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="xcj_motor_backward" kind="command" color="0 255 0" initlabel="bg.xcj_motor_backward">
+		<BlockGenus name="xcj_motor_backward" kind="command" color="254 0 0" initlabel="bg.xcj_motor_backward">
 			<description>
 				<text>Moving the car backward</text>
 			</description>
@@ -2266,7 +2266,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="xcj_ms_digital_write" kind="command" color="0 255 0" initlabel="bg.xcj_ms_digital_write">
+		<BlockGenus name="xcj_ms_digital_write" kind="command" color="254 0 0" initlabel="bg.xcj_ms_digital_write">
 			<description>
 				<text>Write ditial singal to Socket</text>
 			</description>
@@ -2280,7 +2280,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 
-		<BlockGenus name="xcj_ms_digital_read" kind="data" color="0 255 0" initlabel="bg.xcj_ms_digital_read">
+		<BlockGenus name="xcj_ms_digital_read" kind="data" color="254 0 0" initlabel="bg.xcj_ms_digital_read">
 			<description>
 				<text>Read digital status from socket</text>
 			</description>
@@ -2377,7 +2377,7 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_digital_push_button" kind="data" color="255 0 0" initlabel="bg.df_digital_push_button">
+		<BlockGenus name="df_digital_push_button" kind="data" color="0 255 0" initlabel="bg.df_digital_push_button">
 			<BlockConnectors>
 				<BlockConnector connector-type="boolean" connector-kind="plug" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
@@ -2386,24 +2386,11 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0029.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/boton.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_joystick_module_button" kind="data" color="255 102 0" initlabel="bg.df_joystick_module_button">
-			<BlockConnectors>
-				<BlockConnector connector-type="boolean" connector-kind="plug" />
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="variable_number" label="E0" />
-				</BlockConnector>
-			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0061.png</FileLocation>
-				</Image>
-			</Images>
-		</BlockGenus>
 
 		<BlockGenus name="df_capacitive_touch_sensor" kind="data" color="255 102 0" initlabel="bg.df_capacitive_touch_sensor">
 			<BlockConnectors>
@@ -2730,7 +2717,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0034.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/parlante.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -2746,26 +2733,11 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0034_vol.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/parlante.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_gas_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_gas_sensor">
-			<description>
-				<text>Read analog value from pin</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="variable_number" label="E0" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="plug" />
-			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0049.jpg</FileLocation>
-				</Image>
-			</Images>
-		</BlockGenus>
+
 
 
 		<BlockGenus name="df_analog_co_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_co_sensor">
@@ -2790,6 +2762,7 @@
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
+
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
 					<DefaultArg genus-name="variable_number" label="E0" />
 				</BlockConnector>
@@ -2802,18 +2775,23 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_servo" kind="command" color="0 255 0" initlabel="bg.df_servo">
+		<BlockGenus name="df_servo" kind="command" color="254 0 0" initlabel="bg.servo">
 			<description>
 				<text>set a pin to pwm</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
 					<DefaultArg genus-name="variable_number" label="S0" />
 				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
+					<DefaultArg genus-name="number" label="90" />
+				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/img/servo.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 
 		<BlockGenus name="df_360_degree_rotation_motor" kind="command" color="255 102 0" initlabel="bg.df_360_degree_rotation_motor">
@@ -2825,7 +2803,7 @@
 					<DefaultArg genus-name="variable_number" label="E0" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
-					<DefaultArg genus-name="variable_number" label="E0" />
+					<DefaultArg genus-name="number" label="0" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2888,7 +2866,7 @@
 			</description>
 		</BlockGenus>
 		
-		<BlockGenus name="df_led" kind="command" color="0 255 0" initlabel="bg.df_led">
+		<BlockGenus name="df_led" kind="command" color="254 0 0" initlabel="bg.df_led">
 			<description>
 				<text>DFRobot LED Module</text>
 			</description>
@@ -2902,12 +2880,12 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0021.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/led.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_led_pwm" kind="command" color="0 255 0" initlabel="bg.df_led_pwm">
+		<BlockGenus name="df_led_pwm" kind="command" color="254 0 0" initlabel="bg.df_led_pwm">
 			<description>
 				<text>DFRobot LED Module</text>
 			</description>
@@ -2921,13 +2899,13 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0021.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/led.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 
 
-		<BlockGenus name="df_buzzer" kind="command" color="0 255 0" initlabel="bg.df_buzzer">
+		<BlockGenus name="df_buzzer" kind="command" color="254 0 0" initlabel="bg.df_buzzer">
 			<description>
 				<text>DFRobot buzzer Module</text>
 			</description>
@@ -2941,12 +2919,12 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0032.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/parlante.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_buzzer_tone" kind="command" color="0 255 0" initlabel="bg.df_buzzer">
+		<BlockGenus name="df_buzzer_tone" kind="command" color="254 0 0" initlabel="bg.df_buzzer">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50%
 					duty cycle) on a pin.
@@ -2963,12 +2941,12 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0032.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/parlante.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_buzzer_tone_delay" kind="command" color="0 255 0" initlabel="bg.df_buzzer">
+		<BlockGenus name="df_buzzer_tone_delay" kind="command" color="254 0 0" initlabel="bg.df_buzzer">
 			<description>
 				<text>Generates a square wave of the specified frequency (and 50%
 					duty cycle) on a pin.
@@ -2987,7 +2965,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/dfrobot/dfr0032.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/parlante.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -3014,7 +2992,7 @@
 
 		<!-- end of DuinoEDU -->
 
-		<BlockGenus name="ls_LDRModule" kind="data" color="255 0 0" initlabel="bg.ls_LDRModule">
+		<BlockGenus name="ls_LDRModule" kind="data" color="0 255 0" initlabel="bg.ls_LDRModule">
 			<description>
 				<text>LDR Module</text>
 			</description>
@@ -3026,7 +3004,7 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/linksprite/LDRModule.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/img/ldr.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -3051,26 +3029,8 @@
 
 
 
-		<BlockGenus name="ls_RelayModule" kind="command" color="135 206 235" initlabel="bg.ls_RelayModule">
-			<description>
-				<text>Relay Module</text>
-			</description>
-			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
-					<DefaultArg genus-name="variable_number" label="E0" />
-				</BlockConnector>
-				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
-					<DefaultArg genus-name="digital-high" label="HIGH" />
-				</BlockConnector>
-			</BlockConnectors>
-			<Images>
-				<Image>
-					<FileLocation>com/ardublock/block/linksprite/RelayModule.jpg</FileLocation>
-				</Image>
-			</Images>
-		</BlockGenus>
 
-		<BlockGenus name="ls_RotaryPotentiometerModule" kind="data" color="255 0 0" initlabel="bg.ls_RotaryPotentiometerModule">
+		<BlockGenus name="ls_RotaryPotentiometerModule" kind="data" color="0 255 0" initlabel="bg.ls_RotaryPotentiometerModule">
 			<description>
 				<text>Rotary Potentiometer Module</text>
 			</description>
@@ -3082,14 +3042,14 @@
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/linksprite/RotaryPotentiometerModule.jpg</FileLocation>
+					<FileLocation>com/ardublock/block/img/perilla.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
 
 
 <!-- usamos este motor -->
-				<BlockGenus name="little_bits_dcmotor" kind="command" color="0 255 0" initlabel="bg.little_bits_dcmotor">
+				<BlockGenus name="little_bits_dcmotor" kind="command" color="254 0 0" initlabel="bg.little_bits_dcmotor">
 					<description>
 						<text>DCMotor</text>
 					</description>
@@ -3101,11 +3061,11 @@
 							<DefaultArg genus-name="number" label="255" />
 						</BlockConnector>
 					</BlockConnectors>
-					<Images>
-						<Image>
-							<FileLocation>com/ardublock/block/littlebits/output/DCMotor.jpg</FileLocation>
-						</Image>
-					</Images>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/img/motor.png</FileLocation>
+				</Image>
+			</Images>
 				</BlockGenus>
 		
 		</BlockGenuses>
@@ -3199,9 +3159,9 @@
 				<BlockGenusMember>repeat_control</BlockGenusMember>
 				<BlockGenusMember>break</BlockGenusMember>
 			</BlockDrawer>
-<!-- verde -->
+<!-- rojo -->
 <!-- actuadores -->
-			<BlockDrawer button-color="0 255 0" name="bd.utilities" type="factory">
+			<BlockDrawer button-color="254 0 0" name="bd.utilities" type="factory">
 			    <BlockGenusMember>df_led</BlockGenusMember>
 				<BlockGenusMember>df_led_pwm</BlockGenusMember>
 				<BlockGenusMember>df_servo</BlockGenusMember>
@@ -3211,9 +3171,9 @@
 				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
 		</BlockDrawer>
 <!-- naranja -->
-<!-- rojo -->
+<!-- verde -->
 <!-- sensores -->
-		<BlockDrawer button-color="255 0 0" name="bd.dfrobot" type="factory">
+		<BlockDrawer button-color="0 255 0" name="bd.dfrobot" type="factory">
 				<BlockGenusMember>ls_LDRModule</BlockGenusMember>
 				<BlockGenusMember>df_digital_push_button</BlockGenusMember>
 				<BlockGenusMember>ls_RotaryPotentiometerModule</BlockGenusMember>

@@ -57,8 +57,8 @@ public class OpenblocksFrame extends JFrame
 	
 	public String makeFrameTitle()
 	{
-		//String title = Context.APP_NAME + " " + context.getSaveFileName();
-		String title = "Qublock " + context.getSaveFileName();
+		String title = Context.APP_NAME + " " + context.getSaveFileName();
+		// String title = "Qublock " + context.getSaveFileName();
 		if (context.isWorkspaceChanged())
 		{
 			title = title + " *";

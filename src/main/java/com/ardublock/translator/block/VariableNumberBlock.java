@@ -17,6 +17,7 @@ public class VariableNumberBlock extends TranslatorBlock
 		{
 			internalVariableName = translator.buildVariableName(label);
 			translator.addNumberVariable(label, internalVariableName);
+        // esto lo quite para que no genere redefina cosas generadas por el qudimp.h
 	//		translator.addDefinitionCommand("int " + internalVariableName + " = 0 ;");
 //			translator.addSetupCommand(internalVariableName + " = 0;");
 		}
