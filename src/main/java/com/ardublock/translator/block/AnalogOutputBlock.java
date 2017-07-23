@@ -16,8 +16,7 @@ public class AnalogOutputBlock extends TranslatorBlock
 	{
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		String portNum = translatorBlock.toCode();
-		
-		
+
 		if (translatorBlock instanceof NumberBlock)
 		{
 			translator.addOutputPin(portNum.trim());
@@ -29,7 +28,6 @@ public class AnalogOutputBlock extends TranslatorBlock
 		}
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		String value = translatorBlock.toCode();
-		
 		String ret = "analogWrite(" + portNum + " , " + value + ");\n";
 		return ret;
 	}

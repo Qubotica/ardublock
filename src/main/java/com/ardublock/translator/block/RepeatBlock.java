@@ -27,7 +27,7 @@ public class RepeatBlock extends TranslatorBlock
 		}
 		varName=varName+teste.toCode();
 		//translator.addDefinitionCommand("int " + varName + "; //teste");
-		String ret = "for (" + varName + "= 1; " + varName + "<= ( ";
+		String ret = "for ( int " + varName + "=1; " + varName + "<= ( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " ); " + varName + "++ )\n{\n";

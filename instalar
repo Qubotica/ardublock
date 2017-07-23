@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mvn clean package && mvn compile exec:java  -X -Dexec.mainClass="com.ardublock.Main"
+cp target/ardublock-all.jar ~/Arduino/tools/ArduBlockTool/tool/ardublock-all-20130712.jar 

@@ -21,5 +21,4 @@ public class AbsBlock extends TranslatorBlock
 			ret = ret + " )";
 			return codePrefix + ret + codeSuffix;
 		}
-		
 	}

@@ -17,7 +17,7 @@ public class RepeatTimesBlock extends TranslatorBlock
 	{
 		String varName = translator.buildVariableName();
 		translator.addDefinitionCommand("int " + varName + "a;");
-		String ret = "for (" + varName + "a=1; " + varName + "a<= ( ";
+		String ret = "for ( int " + varName + "a=1; " + varName + "a<= ( ";
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		ret = ret + translatorBlock.toCode();
 		ret = ret + " ); ++" + varName + "a )\n{\n";

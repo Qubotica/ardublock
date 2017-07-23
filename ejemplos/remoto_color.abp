@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1600">
+<PageBlocks>
+<Block genus-name="df_led" id="64">
+<Location>
+<X>162</X>
+<Y>112</Y>
+</Location>
+<BeforeBlockId>63</BeforeBlockId>
+<AfterBlockId>73</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="65" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="72" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="df_led" id="73">
+<Location>
+<X>162</X>
+<Y>262</Y>
+</Location>
+<BeforeBlockId>64</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="74" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="75" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="equal" id="75">
+<Location>
+<X>392</X>
+<Y>289</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="73" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="76" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="78" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="78">
+<Label>derecha</Label>
+<Location>
+<X>732</X>
+<Y>292</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="75" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_infrared" id="76">
+<Location>
+<X>402</X>
+<Y>292</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="75" connector-kind="plug" connector-type="number" init-type="number" label="code" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="77" connector-kind="socket" connector-type="number" init-type="number" label="Entrada" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="77">
+<Label>11</Label>
+<Location>
+<X>640</X>
+<Y>292</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="76" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="74">
+<Label>azul</Label>
+<Location>
+<X>392</X>
+<Y>265</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="73" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal" id="72">
+<Location>
+<X>392</X>
+<Y>139</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="64" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="70" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="69" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="69">
+<Label>izquierda</Label>
+<Location>
+<X>732</X>
+<Y>142</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="72" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_infrared" id="70">
+<Location>
+<X>402</X>
+<Y>142</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="72" connector-kind="plug" connector-type="number" init-type="number" label="code" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="71" connector-kind="socket" connector-type="number" init-type="number" label="Entrada" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="71">
+<Label>11</Label>
+<Location>
+<X>640</X>
+<Y>142</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="70" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="65">
+<Label>rojo</Label>
+<Location>
+<X>392</X>
+<Y>115</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="64" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="63">
+<Location>
+<X>69</X>
+<Y>104</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="64" connector-kind="socket" connector-type="cmd" init-type="cmd" label="hacer" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
