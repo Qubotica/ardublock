@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1366">
+<PageBlocks>
+<Block genus-name="df_analog_ambient_light_sensor" id="178">
+<Location>
+<X>373</X>
+<Y>141</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="68" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="179" connector-kind="socket" connector-type="number" init-type="number" label="entrada" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="179">
+<Label>E0</Label>
+<Location>
+<X>611</X>
+<Y>141</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="178" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="df_led_pwm" id="68">
+<Location>
+<X>143</X>
+<Y>114</Y>
+</Location>
+<BeforeBlockId>61</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="69" connector-kind="socket" connector-type="number" init-type="number" label="salida" position-type="single"/>
+<BlockConnector con-block-id="178" connector-kind="socket" connector-type="number" init-type="number" label="nivel" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="69">
+<Label>rojo</Label>
+<Location>
+<X>373</X>
+<Y>117</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="68" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="61">
+<Location>
+<X>50</X>
+<Y>106</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="68" connector-kind="socket" connector-type="cmd" init-type="cmd" label="hacer" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

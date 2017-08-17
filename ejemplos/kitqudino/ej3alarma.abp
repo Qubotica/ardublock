@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1366">
+<PageBlocks>
+<Block genus-name="df_led" id="225">
+<Location>
+<X>193</X>
+<Y>340</Y>
+</Location>
+<BeforeBlockId>214</BeforeBlockId>
+<AfterBlockId>87</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="226" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="227" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-off" id="227">
+<Location>
+<X>423</X>
+<Y>367</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="225" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="226">
+<Label>azul</Label>
+<Location>
+<X>423</X>
+<Y>343</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="225" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="df_led" id="220">
+<Location>
+<X>193</X>
+<Y>718</Y>
+</Location>
+<BeforeBlockId>217</BeforeBlockId>
+<AfterBlockId>223</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="221" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="222" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="223">
+<Location>
+<X>193</X>
+<Y>834</Y>
+</Location>
+<BeforeBlockId>220</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="224" connector-kind="socket" connector-type="number" init-type="number" label="tiempo" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="224">
+<Label>1000</Label>
+<Location>
+<X>309</X>
+<Y>837</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="223" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="digital-off" id="222">
+<Location>
+<X>423</X>
+<Y>745</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="220" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="221">
+<Label>rojo</Label>
+<Location>
+<X>423</X>
+<Y>721</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="220" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="df_led" id="217">
+<Location>
+<X>193</X>
+<Y>602</Y>
+</Location>
+<BeforeBlockId>149</BeforeBlockId>
+<AfterBlockId>220</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="218" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="219" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-on" id="219">
+<Location>
+<X>423</X>
+<Y>629</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="217" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="218">
+<Label>azul</Label>
+<Location>
+<X>423</X>
+<Y>605</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="217" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="df_led" id="214">
+<Location>
+<X>193</X>
+<Y>224</Y>
+</Location>
+<BeforeBlockId>84</BeforeBlockId>
+<AfterBlockId>225</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="215" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="216" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-on" id="216">
+<Location>
+<X>423</X>
+<Y>251</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="214" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="215">
+<Label>rojo</Label>
+<Location>
+<X>423</X>
+<Y>227</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="214" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="df_buzzer_tone" id="84">
+<Location>
+<X>193</X>
+<Y>108</Y>
+</Location>
+<BeforeBlockId>63</BeforeBlockId>
+<AfterBlockId>214</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="85" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="86" connector-kind="socket" connector-type="number" init-type="number" label="frecuencia" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="87">
+<Location>
+<X>193</X>
+<Y>456</Y>
+</Location>
+<BeforeBlockId>225</BeforeBlockId>
+<AfterBlockId>149</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="88" connector-kind="socket" connector-type="number" init-type="number" label="tiempo" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="df_buzzer_tone" id="149">
+<Location>
+<X>193</X>
+<Y>486</Y>
+</Location>
+<BeforeBlockId>87</BeforeBlockId>
+<AfterBlockId>217</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="150" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="151" connector-kind="socket" connector-type="number" init-type="number" label="frecuencia" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="151">
+<Label>330</Label>
+<Location>
+<X>423</X>
+<Y>513</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="149" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="150">
+<Label>tono</Label>
+<Location>
+<X>423</X>
+<Y>489</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="149" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="88">
+<Label>1000</Label>
+<Location>
+<X>309</X>
+<Y>459</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="87" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="86">
+<Label>440</Label>
+<Location>
+<X>423</X>
+<Y>135</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="84" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="85">
+<Label>tono</Label>
+<Location>
+<X>423</X>
+<Y>111</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="84" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="63">
+<Location>
+<X>100</X>
+<Y>100</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="84" connector-kind="socket" connector-type="cmd" init-type="cmd" label="hacer" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

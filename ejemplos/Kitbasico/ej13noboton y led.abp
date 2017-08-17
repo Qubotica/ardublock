@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1366">
+<PageBlocks>
+<Block genus-name="df_digital_push_button" id="62">
+<Location>
+<X>576</X>
+<Y>298</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="71" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="63" connector-kind="socket" connector-type="number" init-type="number" label="entrada" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="63">
+<Label>E0</Label>
+<Location>
+<X>814</X>
+<Y>298</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="62" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="not" id="71">
+<Location>
+<X>534</X>
+<Y>298</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="64" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="62" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="df_led" id="64">
+<Location>
+<X>304</X>
+<Y>271</Y>
+</Location>
+<BeforeBlockId>61</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="65" connector-kind="socket" connector-type="number" init-type="number" label="salida" position-type="single"/>
+<BlockConnector con-block-id="71" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="65">
+<Label>S0</Label>
+<Location>
+<X>534</X>
+<Y>274</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="64" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="61">
+<Location>
+<X>211</X>
+<Y>263</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="64" connector-kind="socket" connector-type="cmd" init-type="cmd" label="hacer" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

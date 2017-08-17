@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1366">
+<PageBlocks>
+<Block genus-name="df_led" id="64">
+<Location>
+<X>207</X>
+<Y>108</Y>
+</Location>
+<Comment>
+<Text>bloque de comando de led,en este caso azul</Text>
+<Location>
+<X>475</X>
+<Y>68</Y>
+</Location>
+<BoxSize>
+<Width>150</Width>
+<Height>100</Height>
+</BoxSize>
+<Collapsed/>
+</Comment>
+<BeforeBlockId>63</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="65" connector-kind="socket" connector-type="number" init-type="number" label="Salida" position-type="single"/>
+<BlockConnector con-block-id="66" connector-kind="socket" connector-type="boolean" init-type="boolean" label="estado" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-on" id="66">
+<Location>
+<X>437</X>
+<Y>135</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="64" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="65">
+<Label>azul</Label>
+<Location>
+<X>437</X>
+<Y>111</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="64" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="63">
+<Location>
+<X>100</X>
+<Y>100</Y>
+</Location>
+<Comment>
+<Text>este programa enciende el led azul</Text>
+<Location>
+<X>251</X>
+<Y>60</Y>
+</Location>
+<BoxSize>
+<Width>150</Width>
+<Height>100</Height>
+</BoxSize>
+<Collapsed/>
+</Comment>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="64" connector-kind="socket" connector-type="cmd" init-type="cmd" label="hacer" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
