@@ -7,17 +7,37 @@ Qublock programador gráfico de qubótica.
 
 Desarrolladores
 ----
+
+Dependencias
+---
+
+* maven
+* openblocks
+
+~~~
+apt-get install maven
+./install_openblocks
+~~~
+
+Compilar
+---
+
 Modificar /src/main/resources/com/ardublock/block/ardublock_def.xml para agregar nuevos bloques
 
-	$ mvn clean package
-
-	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
+~~~
+mvn validate
+mvn clean package
+mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
+~~~
 
 Limpiar
 ----
-	$ mvn clean package
 
-Copiar @target/ardublock-all.jar@ a @Arduino\tools\ArduBlockTool\tool@
+~~~
+mvn clean package
+~~~
+
+Copiar `target/ardublock-all.jar` a `Arduino/tools/ArduBlockTool/tool`
 
 Autores
 ----
