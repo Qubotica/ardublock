@@ -5,29 +5,19 @@ Qublock programador gráfico de qubótica.
 
 * Versiones para [descargas](https://github.com/Qubotica/qublock/releases/)
 
-Instalación
-----
-
-	$ mvn validate
-
-usar
-----
-
-	$ mvn exec:java -Dexec.mainClass="com.ardublock.Main"
-
 Desarrolladores
 ----
-Change the /src/main/resources/com/ardublock/block/ardublock_def.xml to add new blocks to ArduBlock
+Modificar /src/main/resources/com/ardublock/block/ardublock_def.xml para agregar nuevos bloques
 
 	$ mvn clean package
 
 	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
 
-Deploy
+Limpiar
 ----
 	$ mvn clean package
 
-copiar @target/ardublock-all.jar@ a @Arduino\tools\ArduBlockTool\tool@
+Copiar @target/ardublock-all.jar@ a @Arduino\tools\ArduBlockTool\tool@
 
 Autores
 ----
@@ -35,7 +25,7 @@ Autores
 * HE Qichen heqichen@gmail.com
 * Ernesto Bazzano
 
-License
+Licensia
 ----
 
 Copyright (C) 2011 David Li and He Qichen
