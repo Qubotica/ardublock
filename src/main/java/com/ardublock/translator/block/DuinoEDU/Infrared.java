@@ -16,11 +16,10 @@ public class Infrared extends TranslatorBlock {
 		String Pin;
 		TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
 		Pin = translatorBlock.toCode();
-
 		translator.addHeaderFile("IRremote.h");
 		translator.addDefinitionCommand("IRrecv monRecepteur_pin"+Pin+"("+Pin+");\ndecode_results remoto"+Pin+";");
 		translator.addDefinitionCommand("int fn_Recepteur_pin"+Pin+" () {\n  if (monRecepteur_pin"+Pin+".decode(&remoto"+Pin+")) monRecepteur_pin"+Pin+".resume();\nreturn remoto"+Pin+".value;\n}");
-		translator.addSetupCommand("monRecepteur_pin"+Pin+".enableIRIn(); ");
+translator.addSetupCommand("monRecepteur_pin"+Pin+".enableIRIn(); ");
 
 		String ret = "fn_Recepteur_pin"+Pin+" ()";
 		return codePrefix + ret + codeSuffix;

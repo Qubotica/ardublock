@@ -22,10 +22,10 @@ public class SetterVariableDigitalBlock extends TranslatorBlock
 		if (!(tb instanceof VariableDigitalBlock)) {
 			throw new BlockException(blockId, uiMessageBundle.getString("ardublock.error_msg.digital_var_slot"));
 		}
-		
+
 		String ret = tb.toCode();
 		tb = this.getRequiredTranslatorBlockAtSocket(1);
-		ret = ret + " = " + tb.toCode() + " ;\n";
+		ret = "int " + ret + " = " + tb.toCode() + " ;\n";
 		return ret;
 	}
 

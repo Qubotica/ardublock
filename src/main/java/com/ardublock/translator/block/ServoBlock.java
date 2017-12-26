@@ -27,10 +27,10 @@ public class ServoBlock extends TranslatorBlock
 		
 		translatorBlock = this.getRequiredTranslatorBlockAtSocket(1);
 		
-		String ret = servoName + ".write( " + translatorBlock.toCode() + " );\n";
+		String ret = servoName + ".attach(" + pinNumber + ");\ndelay(10);\n" + servoName + ".write( " + translatorBlock.toCode() + " );\n";
 		translator.addHeaderFile("Servo.h");
 		translator.addDefinitionCommand("Servo " + servoName + ";");
-		translator.addSetupCommand(servoName + ".attach(" + pinNumber + ");");
+//		translator.addSetupCommand(servoName + ".attach(" + pinNumber + ");");
 		return ret;
 	}
 

@@ -21,16 +21,10 @@ public class ServoDefaultBlock extends TranslatorBlock {
 		String servoSpecs = "";
 
 		
-		
 		String pinNumber = tb.toCode();
 		String servoName = "servo_pin_" + pinNumber;
 
-		tb = this.getRequiredTranslatorBlockAtSocket(1);
-
-		String ret = servoName + ".write( " + tb.toCode() + " );\n";
-		translator.addHeaderFile("Servo.h");
-		translator.addDefinitionCommand("Servo " + servoName + ";");
-		translator.addSetupCommand(servoName + ".attach(" + pinNumber + servoSpecs + ");");
+  	String ret = servoName + ".detach();\n";
 		return ret;
 	}
 

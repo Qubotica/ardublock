@@ -61,6 +61,9 @@ public class Translator
 	{
 		StringBuilder headerCommand = new StringBuilder();
 		
+		// mi cabecera
+		headerCommand.append("#include <Qudino.h>\n");
+
 		if (!headerFileSet.isEmpty())
 		{
 			for (String file:headerFileSet)
@@ -93,8 +96,8 @@ public class Translator
 	
 	public String generateSetupFunction()
 	{
+
 		StringBuilder setupFunction = new StringBuilder();
-		setupFunction.append("#include <Qudino.h>\n\n");
 		setupFunction.append("void setup()\n{\n");
 		
 		if (!inputPinSet.isEmpty())

@@ -32,16 +32,16 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="variable name" />
+					<DefaultArg genus-name="variable_number" label="nombre" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.start">
-					<DefaultArg genus-name="variable_number" label="E0" />
+					<DefaultArg genus-name="number" label="1" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.end">
 					<DefaultArg genus-name="number" label="5" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.increment">
-					<DefaultArg genus-name="variable_number" label="E0" />
+					<DefaultArg genus-name="number" label="2" />
 				</BlockConnector>
 				<BlockConnector label="commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
@@ -182,7 +182,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.variable">
-					<DefaultArg genus-name="variable_number" label="variable name" />
+					<DefaultArg genus-name="variable_number" label="nombre" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.repeat_times">
 					<DefaultArg genus-name="number" label="5" />
@@ -190,7 +190,7 @@
 				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="subroutine" kind="command" color="200 200 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
+		<BlockGenus name="subroutine" kind="command" color="255 255 0" initlabel="bg.subroutine" is-starter="yes" is-terminator="yes" label-unique="yes" editable-label="yes">
 			<description>
 				<text>subroutine</text>
 			</description>
@@ -198,7 +198,7 @@
 				<BlockConnector label="bc.commands" connector-type="cmd" connector-kind="socket" />
 			</BlockConnectors>
 		</BlockGenus>
-		<BlockGenus name="subroutine-ref" kind="command" color="200 200 0" initlabel="bg.subroutine" editable-label="yes">
+		<BlockGenus name="subroutine-ref" kind="command"  color="255 255 0" initlabel="bg.subroutine" editable-label="yes">
 			<description>
 				<text>invoke subroutine</text>
 			</description>
@@ -1489,7 +1489,7 @@
 			</BlockConnectors>
 		</BlockGenus>
 		
-		<BlockGenus name="variable_string" kind="data" initlabel="bg.variable_string" editable-label="yes" color="0 168 255" >
+		<BlockGenus name="variable_string" kind="data" initlabel="bg.variable_string" editable-label="yes" color="230 110 110" >
 			<description>
 				<text>string message</text>
 			</description>
@@ -1651,7 +1651,7 @@
 	      </BlockConnectors>
 	    </BlockGenus>
 				
-	    <BlockGenus name="variable_String" kind="data" initlabel="bg.variable_String" editable-label="yes" is-label-value="yes" color="0 168 255" >
+	    <BlockGenus name="variable_String" kind="data" initlabel="bg.variable_String" editable-label="yes" is-label-value="yes" color="230 110 110" >
 	      <description>
 	        <text>
 	          Variable String
@@ -1661,22 +1661,20 @@
 	        <BlockConnector connector-type="string" connector-kind="plug" position-type="mirror" />
 	      </BlockConnectors>
 	    </BlockGenus>
-		<!--****************** Utilities *************** -->		
-		<BlockGenus name="servo_default" kind="command" color="205 133 63"  initlabel="bg.servo">
+		<!--****************** Utilities *************** -->
+<!-- default -->		
+		<BlockGenus name="servo_default" kind="command" color="0 168 0" initlabel="bg.servo">
 			<description>
 				<text>Servo Default</text>
 			</description>
 			<BlockConnectors>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.pin_number">
+				<BlockConnector connector-type="number" connector-kind="socket" label="salida">
 					<DefaultArg genus-name="variable_number" label="S0" />
-				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="bc.angle">
-					<DefaultArg genus-name="number" label="90" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
 				<Image>
-					<FileLocation>com/ardublock/block/SG90.png</FileLocation>
+					<FileLocation>com/ardublock/block/img/servo.png</FileLocation>
 				</Image>
 			</Images>
 		</BlockGenus>
@@ -1937,7 +1935,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" >
-					<DefaultArg genus-name="message" label="message" />
+					<DefaultArg genus-name="message" label="mensaje" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -1948,10 +1946,10 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket" label="bc.message">
-					<DefaultArg genus-name="message" label="message" />
+					<DefaultArg genus-name="message" label="mensaje" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.ln">
-					<DefaultArg genus-name="true" label="true" />
+					<DefaultArg genus-name="true" label="VERDADERO" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2170,7 +2168,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
-					<DefaultArg genus-name="message" label="message" />
+					<DefaultArg genus-name="message" label="VERDADERO" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2181,7 +2179,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket">
-					<DefaultArg genus-name="number" label="11" />
+					<DefaultArg genus-name="number" label="E0" />
 "				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2203,7 +2201,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="string" connector-kind="socket">
-					<DefaultArg genus-name="message" label="message" />
+					<DefaultArg genus-name="message" label="VERDADERO" />
 				</BlockConnector>
 			</BlockConnectors>
 		</BlockGenus>
@@ -2294,13 +2292,13 @@
 			</Images>
 		</BlockGenus>
 
-		<BlockGenus name="df_analog_sound_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_sound_sensor">
+		<BlockGenus name="df_analog_sound_sensor" kind="data" color="224 0 0" initlabel="bg.df_analog_sound_sensor">
 			<description>
 				<text>Read analog value from pin</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="entrada">
-					<DefaultArg genus-name="variable_number" label="E0" />
+					<DefaultArg genus-name="variable_number" label="oido" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -2310,13 +2308,13 @@
 				</Image>
 			</Images>
 		</BlockGenus>
-		<BlockGenus name="df_analog_volume_sensor" kind="data" color="255 102 0" initlabel="bg.df_analog_sound_sensor">
+		<BlockGenus name="df_analog_volume_sensor" kind="data" color="224 0 0" initlabel="bg.df_analog_sound_sensor">
 			<description>
 				<text>Read analog value of sound volume from pin</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="entrada">
-					<DefaultArg genus-name="variable_number" label="E0" />
+					<DefaultArg genus-name="variable_number" label="oido" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="plug" />
 			</BlockConnectors>
@@ -2355,7 +2353,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="salida">
-					<DefaultArg genus-name="variable_number" label="S0" />
+					<DefaultArg genus-name="variable_number" label="rojo" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="PRENDIDO" />
@@ -2374,7 +2372,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket" label="salida">
-					<DefaultArg genus-name="variable_number" label="S0" />
+					<DefaultArg genus-name="variable_number" label="rojo" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.level">
 					<DefaultArg genus-name="number" label="255" />
@@ -2394,7 +2392,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket"  label="salida">
-					<DefaultArg genus-name="variable_number" label="S0" />
+					<DefaultArg genus-name="variable_number" label="TONO" />
 				</BlockConnector>
 				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
 					<DefaultArg genus-name="digital-on" label="PRENDIDO" />
@@ -2415,7 +2413,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket"  label="salida">
-					<DefaultArg genus-name="variable_number" label="S0" />
+					<DefaultArg genus-name="variable_number" label="TONO" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
 					<DefaultArg genus-name="number" label="440" />
@@ -2437,7 +2435,7 @@
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="socket"  label="salida">
-					<DefaultArg genus-name="variable_number" label="S0" />
+					<DefaultArg genus-name="variable_number" label="tono" />
 				</BlockConnector>
 				<BlockConnector connector-type="number" connector-kind="socket" label="bc.frequency">
 					<DefaultArg genus-name="number" label="440" />
@@ -2522,7 +2520,7 @@
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="code" />
 				<BlockConnector connector-type="number" connector-kind="socket" label="entrada">
-					<DefaultArg genus-name="variable_number" label="11" />
+					<DefaultArg genus-name="variable_number" label="E0" />
 				</BlockConnector>
 			</BlockConnectors>
 			<Images>
@@ -2532,7 +2530,7 @@
 			</Images>
 		</BlockGenus>
 	</BlockGenuses>
-		
+
 	<BlockFamilies>
 		<BlockFamily>
 			<FamilyMember>digital-high</FamilyMember>
@@ -2615,6 +2613,8 @@
 			<BlockDrawer name="bd.control" type="factory" is-open="yes" button-color="255 255 0">
 				<BlockGenusMember>loop</BlockGenusMember>
 				<BlockGenusMember>program</BlockGenusMember>
+				<BlockGenusMember>subroutine</BlockGenusMember>
+				<BlockGenusMember>subroutine-ref</BlockGenusMember>
 				<BlockGenusMember>delay</BlockGenusMember>
 				<BlockGenusMember>if</BlockGenusMember>
 				<BlockGenusMember>ifelse</BlockGenusMember>
@@ -2630,6 +2630,7 @@
 			    <BlockGenusMember>df_led</BlockGenusMember>
 				<BlockGenusMember>df_led_pwm</BlockGenusMember>
 				<BlockGenusMember>df_servo</BlockGenusMember>
+				<BlockGenusMember>servo_default</BlockGenusMember>
 				<BlockGenusMember>little_bits_dcmotor</BlockGenusMember>
 <!--				<BlockGenusMember>df_buzzer</BlockGenusMember>
 				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>	-->
@@ -2644,22 +2645,31 @@
 				<BlockGenusMember>df_analog_ambient_light_sensor</BlockGenusMember>
 				<BlockGenusMember>df_analog_mma7361_x</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
+				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
 		</BlockDrawer>
 
 <!-- comparar -->
 			<BlockDrawer button-color="255 128 0" name="bd.logic" type="factory">
 				<BlockGenusMember>greater</BlockGenusMember>
 				<BlockGenusMember>less</BlockGenusMember>
+<!--
 				<BlockGenusMember>equal</BlockGenusMember>
+-->
+				<BlockGenusMember>equal_poly</BlockGenusMember>
+				<BlockGenusMember>not_equal_poly</BlockGenusMember>
+
 				<BlockGenusMember>greater_equal</BlockGenusMember>
 				<BlockGenusMember>less_equal</BlockGenusMember>
+<!--
 				<BlockGenusMember>not_equal</BlockGenusMember>
 				<BlockGenusMember>equal_digital</BlockGenusMember>
 				<BlockGenusMember>not_equal_digital</BlockGenusMember>
-				<BlockGenusMember>equal_poly</BlockGenusMember>
-				<BlockGenusMember>not_equal_poly</BlockGenusMember>
+-->
+
+<!--
 				<BlockGenusMember>equal_string</BlockGenusMember>
 				<BlockGenusMember>not_equal_string</BlockGenusMember>
+-->
 				<BlockGenusMember>and</BlockGenusMember>
 				<BlockGenusMember>or</BlockGenusMember>
 				<BlockGenusMember>not</BlockGenusMember>
@@ -2682,15 +2692,17 @@
 <!--  comunicaciones -->
 			<BlockDrawer button-color="0 0 255" name="bd.communication" type="factory">
 				<BlockGenusMember>serial_read</BlockGenusMember>
+<!--
 				<BlockGenusMember>serial_parseInt</BlockGenusMember>
 				<BlockGenusMember>serial_write</BlockGenusMember>
+-->
 				<BlockGenusMember>serial_print</BlockGenusMember>
 <!--
 				<BlockGenusMember>ir_setport</BlockGenusMember>
 				<BlockGenusMember>ir_getcode</BlockGenusMember>
+
 				<BlockGenusMember>df_adjustable_infrared_sensor_switch</BlockGenusMember>
--->
-			</BlockDrawer>
+-->			</BlockDrawer>
 
 
 <!-- cyan -->

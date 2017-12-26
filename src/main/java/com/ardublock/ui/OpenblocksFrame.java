@@ -161,7 +161,7 @@ public class OpenblocksFrame extends JFrame
 			    URL url;
 			    if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
 			        try {
-						url = new URL("http://maquinaslibres.noblogs.org/");
+						url = new URL("https://maquinaslibres.noblogs.org/tag/qubotica/");
 			            desktop.browse(url.toURI());
 			        } catch (Exception e1) {
 			            e1.printStackTrace();
