@@ -17,7 +17,7 @@ public class AnalogInputBlock extends TranslatorBlock
 
         TranslatorBlock translatorBlock = this.getRequiredTranslatorBlockAtSocket(0);
         String portNum = translatorBlock.toCode();
-        String ret = "255 - (analogRead(" + portNum + ")/4)";
+        String ret = "(255 - (analogRead(" + portNum + ")/4))";
 		return codePrefix + ret + codeSuffix;
 	}
 
