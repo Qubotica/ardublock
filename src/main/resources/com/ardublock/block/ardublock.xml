@@ -1717,19 +1717,24 @@
 			</Images>
 		</BlockGenus>
 		
-		<BlockGenus name="ultrasonic" kind="data" color="77 191 169" initlabel="bg.ultrasonic">
+		<BlockGenus name="ultrasonic" kind="data" color="224 0 0" initlabel="bg.ultrasonic">
 			<description>
 				<text>Ultrasonic distance sensor</text>
 			</description>
 			<BlockConnectors>
 				<BlockConnector connector-type="number" connector-kind="plug" label="cm" />
-				<BlockConnector connector-type="number" connector-kind="socket" label="trigger #">
-					<DefaultArg genus-name="DuinoEDU_D2" label="D2" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="disparo">
+					<DefaultArg genus-name="variable_number" label="S0" />
 				</BlockConnector>
-				<BlockConnector connector-type="number" connector-kind="socket" label="echo #">
-					<DefaultArg genus-name="DuinoEDU_D3" label="D3" />
+				<BlockConnector connector-type="number" connector-kind="socket" label="eco">
+					<DefaultArg genus-name="variable_number" label="E0" />
 				</BlockConnector>
 			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/img/ultrasonico.png</FileLocation>
+				</Image>
+			</Images>
 		</BlockGenus>
 
 		<BlockGenus name="LCD_I2C_Sainsmart_20by4" kind="command" color="205 133 63" initlabel="bg.LCD_I2C_Sainsmart_20by4">
@@ -2529,6 +2534,65 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+
+
+
+		
+		<BlockGenus name="ada_neopixel_pixel_colorGRB" kind="command" color="0 168 0" initlabel="bg.ada_neopixel_pixel_colorGRB">
+			<description>
+				<text>ada_neopixel_pixel_colorGRB</text>
+			</description>
+			<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="salida">
+							<DefaultArg genus-name="variable_number" label="S0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="Pixel">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/img/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		<BlockGenus name="ada_neopixel_pixel_colorRGB" kind="command" color="0 168 0" initlabel="bg.ada_neopixel_pixel_colorRGB">
+			<description>
+				<text>ada_neopixel_pixel_colorRGB</text>
+			</description>
+			<BlockConnectors>
+						<BlockConnector connector-type="number" connector-kind="socket" label="salida">
+							<DefaultArg genus-name="variable_number" label="S0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="N° Led">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.red">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.green">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.blue">
+					<DefaultArg genus-name="number" label="255" />
+				</BlockConnector>
+			</BlockConnectors>
+				<Images>
+				<Image>
+				<FileLocation>com/ardublock/block/img/neopixel.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
 	</BlockGenuses>
 
 	<BlockFamilies>
@@ -2635,6 +2699,7 @@
 <!--				<BlockGenusMember>df_buzzer</BlockGenusMember>
 				<BlockGenusMember>df_buzzer_tone</BlockGenusMember>	-->
 				<BlockGenusMember>df_buzzer_tone_delay</BlockGenusMember>
+				<BlockGenusMember>ada_neopixel_pixel_colorRGB</BlockGenusMember>
 		</BlockDrawer>
 <!-- naranja -->
 <!-- verde -->
@@ -2646,6 +2711,7 @@
 				<BlockGenusMember>df_analog_mma7361_x</BlockGenusMember>
 				<BlockGenusMember>DuinoEDU_infrared</BlockGenusMember>
 				<BlockGenusMember>df_analog_sound_sensor</BlockGenusMember>
+				<BlockGenusMember>ultrasonic</BlockGenusMember>
 		</BlockDrawer>
 
 <!-- comparar -->
@@ -2688,6 +2754,11 @@
 				<BlockGenusMember>division</BlockGenusMember>
 				<BlockGenusMember>modulo</BlockGenusMember>
 				<BlockGenusMember>abs</BlockGenusMember>
+				<BlockGenusMember>cos</BlockGenusMember>
+				<BlockGenusMember>sin</BlockGenusMember>
+				<BlockGenusMember>tan</BlockGenusMember>
+				<BlockGenusMember>sqrt</BlockGenusMember>
+				<BlockGenusMember>random_range</BlockGenusMember>
 			</BlockDrawer>
 <!--  comunicaciones -->
 			<BlockDrawer button-color="0 0 255" name="bd.communication" type="factory">

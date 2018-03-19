@@ -25,7 +25,8 @@ public class SetterVariableDigitalBlock extends TranslatorBlock
 
 		String ret = tb.toCode();
 		tb = this.getRequiredTranslatorBlockAtSocket(1);
-		ret = "int " + ret + " = " + tb.toCode() + " ;\n";
+		translator.addDefinitionCommand("int " + ret + ";\n");
+		ret = ret + " = " + tb.toCode() + " ;\n";
 		return ret;
 	}
 
